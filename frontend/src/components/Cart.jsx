@@ -33,7 +33,7 @@ export default function Cart() {
       setLoading(true);
       try {
         const res = await fetch(
-          "https://e-commerce-1-km7j.onrender.com/cart/get",
+          "http://localhost:3000/cart/get",
           { method: "GET", credentials: "include" }
         );
         const data = await res.json();
@@ -48,7 +48,7 @@ export default function Cart() {
     const fetchAddresses = async () => {
       try {
         const res = await fetch(
-          "https://e-commerce-1-km7j.onrender.com/address/get",
+          "http://localhost:3000/address/get",
           { method: "GET", credentials: "include" }
         );
         const data = await res.json();

@@ -34,7 +34,7 @@ export default function Checkout() {
       }));
 
       const res = await fetch(
-        "https://e-commerce-1-km7j.onrender.com/order/addOrder",
+        "http://localhost:3000/order/addOrder",
         {
           method: "POST",
           credentials: "include",
