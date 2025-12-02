@@ -18,7 +18,7 @@ export default function OtpBox({
 
     setSendingOtp(true);
     try {
-      const res = await fetch("http://localhost:3000/otp/send", {
+      const res = await fetch("https://project-3-ecommencer-1.onrender.com/otp/send", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
@@ -42,7 +42,7 @@ export default function OtpBox({
     setVerifyingOtp(true);
 
     try {
-      const res = await fetch("http://localhost:3000/otp/verify", {
+      const res = await fetch("https://project-3-ecommencer-1.onrender.com/otp/verify", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },

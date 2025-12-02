@@ -11,7 +11,7 @@ export default function CartItem({ item }) {
 
     try {
       const res = await fetch(
-        "http://localhost:3000/cart/update",
+        "https://project-3-ecommencer-1.onrender.com/cart/update",
         {
           method: "POST",
           credentials: "include",

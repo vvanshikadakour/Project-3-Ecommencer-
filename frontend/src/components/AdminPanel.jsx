@@ -26,7 +26,7 @@ function AdminPanel() {
 
   const fetchProducts = async () => {
     try {
-      const res = await fetch("http://localhost:3000/products");
+      const res = await fetch("https://project-3-ecommencer-1.onrender.com/products");
       const data = await res.json();
       setProducts(Array.isArray(data.products) ? data.products : []);
     } catch (error) {
@@ -48,7 +48,7 @@ function AdminPanel() {
     newProduct.image.forEach((img) => img && formData.append("image", img));
 
     try {
-      const res = await fetch("http://localhost:3000/products/add-product", {
+      const res = await fetch("https://project-3-ecommencer-1.onrender.com/products/add-product", {
         method: "POST",
         body: formData,
       });
@@ -85,7 +85,7 @@ function AdminPanel() {
       newImages.forEach((img) => img && formData.append("image", img));
 
       res = await fetch(
-        `http://localhost:3000/products/update-product/${id}`,
+        `https://project-3-ecommencer-1.onrender.com/products/update-product/${id}`,
         {
           method: "PATCH",
           body: formData,
@@ -95,7 +95,7 @@ function AdminPanel() {
       // Agar images change nahi hui → JSON bhejo
       // Server ko ensure karo ki content-type application/json accept karta hai
       res = await fetch(
-        `http://localhost:3000/products/update-product/${id}`,
+        `https://project-3-ecommencer-1.onrender.com/products/update-product/${id}`,
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
@@ -127,7 +127,7 @@ function AdminPanel() {
 
   const handleDelete = async (id) => {
   try {
-    const res = await fetch(`http://localhost:3000/products/delete-product/${id}`, {
+    const res = await fetch(`https://project-3-ecommencer-1.onrender.com/products/delete-product/${id}`, {
       method: "DELETE",
     });
     const data = await res.json(); // <- backend ka error message

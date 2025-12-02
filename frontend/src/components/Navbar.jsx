@@ -19,7 +19,7 @@ export default function Navbar() {
     const fetchUser = async () => {
       try {
         const res = await fetch(
-          "http://localhost:3000/user/getProfile",
+          "https://project-3-ecommencer-1.onrender.com/user/getProfile",
           { method: "GET", credentials: "include" }
         );
         const data = await res.json();

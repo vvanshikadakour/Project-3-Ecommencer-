@@ -15,7 +15,7 @@ export default function ShopCategory() {
     const checkLogin = async () => {
       try {
         const res = await fetch(
-          "http://localhost:3000/user/getProfile",
+          "https://project-3-ecommencer-1.onrender.com/user/getProfile",
           { method: "GET", credentials: "include" }
         );
         const data = await res.json();
@@ -47,7 +47,7 @@ export default function ShopCategory() {
     const shippingCost = product.productPrice >= 1000 ? 0 : 50;
 
     try {
-      const res = await fetch("http://localhost:3000/cart/add", {
+      const res = await fetch("https://project-3-ecommencer-1.onrender.com/cart/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

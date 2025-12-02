@@ -8,7 +8,7 @@ export default function Orders() {
     async function fetchOrders() {
       try {
         setLoading(true);
-        const res = await fetch("http://localhost:3000/order/getOrder", {
+        const res = await fetch("https://project-3-ecommencer-1.onrender.com/order/getOrder", {
           method: "GET",
           credentials: "include",
         });

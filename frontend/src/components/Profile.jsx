@@ -31,7 +31,7 @@ export default function Profile() {
   useEffect(() => {
     async function fetchProfile() {
       try {
-        const res = await fetch("http://localhost:3000/user/Profile", {
+        const res = await fetch("https://project-3-ecommencer-1.onrender.com/user/Profile", {
           method: "GET",
           credentials: "include",
         });
@@ -61,7 +61,7 @@ export default function Profile() {
   // =========================
   const handleLogin = async () => {
     try {
-      const res = await fetch("http://localhost:3000/user/login", {
+      const res = await fetch("https://project-3-ecommencer-1.onrender.com/user/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -102,7 +102,7 @@ export default function Profile() {
       formData.append("password", form.password);
       if (form.picture) formData.append("picture", form.picture);
 
-      const res = await fetch("http://localhost:3000/user/signup", {
+      const res = await fetch("https://project-3-ecommencer-1.onrender.com/user/signup", {
         method: "POST",
         body: formData,
         credentials: "include",
@@ -127,7 +127,7 @@ export default function Profile() {
   // =========================
   const handleLogout = async () => {
     try {
-      const res = await fetch("http://localhost:3000/user/logout", {
+      const res = await fetch("https://project-3-ecommencer-1.onrender.com/user/logout", {
         method: "POST",
         credentials: "include",
       });

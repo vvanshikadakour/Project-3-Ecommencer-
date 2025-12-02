@@ -13,7 +13,7 @@ export default function AddressList({
   const deleteAddress = async (id) => {
     try {
       const res = await fetch(
-        `http://localhost:3000/address/delete/${id}`,
+        `https://project-3-ecommencer-1.onrender.com/address/delete/${id}`,
         { method: "DELETE", credentials: "include" }
       );
       if (res.ok) {

@@ -6,7 +6,7 @@ import Productcontext from './context'
   useEffect(() => {
   async function getData() {
     try {
-      const res = await fetch("http://localhost:3000/products");
+      const res = await fetch("https://project-3-ecommencer-1.onrender.com/products");
 
       if (res.status === 200) {   // status code check
         const data = await res.json();

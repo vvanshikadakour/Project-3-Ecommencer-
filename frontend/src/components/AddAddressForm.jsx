@@ -25,7 +25,7 @@ export default function AddAddressForm({
 
     try {
       const res = await fetch(
-        "http://localhost:3000/address/add",
+        "https://project-3-ecommencer-1.onrender.com/address/add",
         {
           method: "POST",
           credentials: "include",
